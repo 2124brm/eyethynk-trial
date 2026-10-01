@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eye Thynk</title>
+  <meta name="description" content="Eye Thynk — simple philosophy for ordinary days. Read slowly. Look again.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: rgb(243, 239, 232);
+      --sage: rgb(143, 159, 141);
+      --ink: rgb(24, 24, 22);
+      --muted: rgba(24, 24, 22, 0.62);
+      --rule: rgba(24, 24, 22, 0.14);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.25rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .sc { font-family: "Cormorant SC", Georgia, serif; }
+
+    /* Header */
+    header {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+
+    header h1 {
+      font-family: "Cormorant SC", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(3rem, 11vw, 5.5rem);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+
+    header .tagline {
+      margin-top: 1.5rem;
+      font-style: italic;
+      font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+      color: var(--muted);
+    }
+
+    header .scroll {
+      margin-top: 4rem;
+      font-family: "Cormorant SC", Georgia, serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    header .scroll:hover { color: var(--ink); }
+
+    /* Sections */
+    section { padding: 6rem 0; }
+
+    h2 {
+      font-family: "Cormorant SC", Georgia, serif;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .about p {
+      text-wrap: pretty;
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .about p:last-child { margin-bottom: 0; }
+
+    /* Quotes on sage */
+    .quotes {
+      background: var(--sage);
+      color: #fff;
+    }
+
+    .quotes h2 { color: rgba(255, 255, 255, 0.8); }
+
+    .quotes ol { list-style: none; }
+
+    .quotes li {
+      text-align: center;
+      padding: 3rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .quotes li:first-child { border-top: none; padding-top: 0; }
+    .quotes li:last-child { padding-bottom: 0; }
+
+    .quotes blockquote {
+      font-family: "Cormorant SC", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 4.6vw, 2.1rem);
+      line-height: 1.35;
+    }
+
+    .quotes blockquote span { display: block; text-wrap: balance; }
+    .quotes blockquote span + span { margin-top: 0.6rem; }
+
+    /* Instagram */
+    .follow { text-align: center; }
+
+    .follow p {
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      font-family: "Cormorant SC", Georgia, serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--ink);
+      padding: 0.85rem 2.2rem;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem 3rem;
+      border-top: 1px solid var(--rule);
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    /* Gentle fade-in */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 1.4s ease, transform 1.4s ease;
+      }
+      .fade.seen { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Eye Thynk</h1>
+    <p class="tagline">Simple philosophy for ordinary days.<br>Read slowly. Look again.</p>
+    <a class="scroll" href="#about">Begin</a>
+  </header>
+
+  <main>
+    <section id="about" class="about">
+      <div class="wrap fade">
+        <h2>About</h2>
+        <p>Eye Thynk is a quiet corner of Instagram for people who like to pause.</p>
+        <p>Each post is two short lines and one question. No school, no guru, no rules. Just plain words about the self, time, and the one who is noticing all of it, drawn from many traditions and from everyday life.</p>
+        <p>Read one. Then look up from the screen for a moment.</p>
+      </div>
+    </section>
+
+    <section id="quotes" class="quotes">
+      <div class="wrap">
+        <h2>On Awareness &amp; Now</h2>
+        <ol>
+          <li class="fade">
+            <blockquote>
+              <span>The clock counts every hour.</span>
+              <span>Nobody has ever counted now.</span>
+            </blockquote>
+          </li>
+          <li class="fade">
+            <blockquote>
+              <span>You remember a thousand mornings.</span>
+              <span>You have only ever woken up in one.</span>
+            </blockquote>
+          </li>
+          <li class="fade">
+            <blockquote>
+              <span>A thought arrives and calls itself you.</span>
+              <span>Watch it leave. See who is still here.</span>
+            </blockquote>
+          </li>
+          <li class="fade">
+            <blockquote>
+              <span>Your phone holds ten thousand moments.</span>
+              <span>Not one of them is this one.</span>
+            </blockquote>
+          </li>
+          <li class="fade">
+            <blockquote>
+              <span>The tea in your hands is already cooling.</span>
+              <span>Drink it before you think about it.</span>
+            </blockquote>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="follow" class="follow">
+      <div class="wrap fade">
+        <h2>Follow Along</h2>
+        <p>A new reflection most days.</p>
+        <a class="button" href="https://www.instagram.com/eyethynk/" target="_blank" rel="noopener">@eyethynk on Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year">2026</span> Eye Thynk
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    var items = document.querySelectorAll(".fade");
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("seen");
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      items.forEach(function (el) { io.observe(el); });
+    } else {
+      items.forEach(function (el) { el.classList.add("seen"); });
+    }
+  </script>
+</body>
+</html>
